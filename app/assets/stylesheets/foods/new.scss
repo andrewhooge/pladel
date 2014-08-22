@@ -1,0 +1,65 @@
+.edit_user {
+  p {
+    font-size: 1.4em;
+    margin-bottom: 0;
+  }
+  margin-top: 75px;
+  width: 100%;
+  text-align: center;
+  // @include outer-container;
+  div {
+    width: 33%;
+    float: left;
+    display: block;
+    margin: auto;
+    // @include span-columns(3);
+    label {
+      font-weight: normal;
+      border: solid #75c9bc 2px;
+      border-radius: 5px;
+      background-color: white;
+      color: #585858;
+      text-transform: capitalize; 
+      margin: 10px 5px; 
+      padding-top: 3px;
+      padding-bottom: 3px; 
+      max-width: 150px; 
+    }
+    p {
+      font-size: 1.1em;
+      color: #75c9bc;
+    }
+
+    label.selected {
+      background-color: #585858;
+      color: white;
+    }
+  }
+}
+
+.selected {
+  background-color: red;
+}
+
+#user_meals_per_day {
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+button, input[type="submit"] {
+  background-color: #75c9bc; 
+}
+
+
+input[type="checkbox"] {
+  position: relative;
+  right: 85px;
+  top: 26px; 
+  height: 20px;
+  width: 20px;
+  z-index: -1;
+  display: none;
+}
+

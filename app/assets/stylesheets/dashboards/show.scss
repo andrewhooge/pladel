@@ -1,0 +1,374 @@
+
+
+nav a.navLink {
+  @media screen and (max-width: 450px) {
+  // font-size: 0.7em;
+  // margin: 25px 4px;
+  }
+}
+
+.dashboard {
+  padding-top: 65px;
+  text-align: center;
+  background-color: white;
+  // height: 750px;
+
+  .percent {
+    float: right;
+  }
+
+  #firstSectionWrapper {
+    // background: url(http://i.imgur.com/ZTpH5uP.png?1) no-repeat 50% 70%;
+    // background-size: cover;
+    // background-color: #F0F0F0;
+  }
+
+// .overallGrade {
+//   font-size: 5em;
+// }
+
+  // .letter {
+  //   display: inline-block;
+  //   color: #75C9BC;
+  //   font-weight: 700;
+  //   font-size: 1.85em;
+  //   margin-left: 18px;
+  // }
+
+  // .overall {
+  //   position: relative;
+  //   bottom: 166px;
+  //   margin-left: 0;
+  //   font-size: 5em;
+  //   color: #75C9BC;
+  //   display: none;
+  // }
+
+.scoresWrapper {
+  display: inline-block;
+  animation-delay: .15s;
+  -webkit-animation-delay: .15s;
+  -moz-animation-delay: .15s;
+}
+
+  .letter.overall {
+    display: none;
+  }
+
+  .health {
+    height: 10px;
+  }
+
+  .sleep, .movement, .nutrition {
+    float: left;
+    width: 33%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0;
+
+    img {
+      width: 27px;
+      position: absolute;
+      top: 13px;
+      left: 17px;
+    }
+
+    p.percentage {
+      font-family: 'Gruppo', Sans-serif;
+      font-weight: 800;
+      font-size: 2em;
+      position: relative;
+      left: 16px;
+      // border-bottom: 1px solid #333333;
+    }
+
+    p.category {
+      text-transform: uppercase;
+      font-family: 'Michroma', Sans-serif;
+      margin-top: -20px;
+      font-size: .7em;
+      color: #75C9BC;
+    }
+  }
+
+  // .sleep p {
+  //   position: relative;
+  //   left: 8px;
+  // }
+
+  .progress-bar-indication {
+    $progress-border-color: $base-border-color;
+    $progress-border: 1px solid $progress-border-color;
+    $progress-meter-border-color: $base-accent-color;
+    $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
+    $progress-meter-color: $progress-meter-border-color;
+    $progress-background: darken($base-background-color, 5);
+    $progress-animation-duration: 0.7s;
+    $progress-color: white;
+
+    background-color: $progress-background;
+    border: $progress-border;
+    box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+    border-radius: $base-border-radius;
+    margin: 0 auto;
+    width: 50%;
+    display: inline-block;
+
+    > span.meter {
+      @include box-sizing(border-box);
+      background-color: #75C9BC;
+      background-size: 40px 40px;
+      background-repeat: repeat-x;
+      border: $progress-meter-border;
+      border-radius: $base-border-radius /1.5;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      display: block;
+      height: 100%;
+      width: 60%;
+    }
+
+    p {
+      margin-bottom: 0;
+      padding: .1em .5em;
+      font-weight: 800;
+      color: $progress-color;
+      text-shadow: 0 0 1px black;
+      text-align: left;
+    }
+  }
+}
+
+
+// Meals section
+.meals {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -14px;
+
+  .complete {
+    border: 1px solid green;
+    opacity: 0.5;
+  }
+
+  .incomplete {
+    border: 1px solid red;
+    opacity: 0.5;
+  }
+}
+
+.dashboard {
+  .daily_meal {
+    width: 33%;
+    margin: auto;
+
+    #checkButton {
+      background-color: #2ecc71;
+      border-radius: 5px;
+
+      a {
+        padding: 5px 15px;
+        color: white;
+      }
+    }
+    #xButton {
+      background-color: #e74c3c;
+      border-radius: 5px;
+
+      a {
+        padding: 5px 15px;
+        color: white;
+      }
+    }
+
+    li {
+      width: 50px;
+      // width: 33%;
+      float: left;
+      display: block;
+      // position: relative;
+      // left: 47px;
+    }
+  }
+
+  .mealsLogged {
+    color: black;
+    font-size: .8em;
+    margin: 25px 10px 0 10px;
+    display: inline-block;
+  } 
+
+  .meal_buttons {
+    animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    a {
+      background-color: #585858;
+      color: white;
+      padding: 14px 25px;
+      border: 3px solid #75C9BC;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: Roboto;
+      font-size: 0.8em;
+      letter-spacing: 1px;
+      border-radius: 8px;
+
+      // &:hover {
+      //   border-color: black;
+      // }
+
+      // &:focus {
+      //   outline: 0;
+      // }
+    }
+  }
+
+  .checked {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 39px;
+    z-index: 55555;
+    img {
+      width: 200px;
+    }
+
+  }
+
+  .closed {
+    display: none;
+    position: absolute;
+    bottom: 151px;
+    left: 38px;
+    top: 38px;
+    z-index: 55555;
+    img {
+      width: 200px;
+    }
+  }
+
+  .meal-reporting img {
+    // opacity: .8;
+    // display: block;
+    // width: 200px;
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin-bottom: 10px;
+    // padding: 10px;
+  }
+}
+
+//Time of data links
+
+.dataTime {
+  padding-bottom: 13px;
+  padding-top: 5px;
+  
+  a{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #75c9bc;
+    font-family: 'Michroma', Helvetica;
+    font-size: .8em;
+  }
+  a:first-child {
+    border-bottom: solid 3px;
+    padding-bottom: 2px;
+  }
+}
+
+//donut chart test
+
+.gpaTitle {
+  font-family: 'Michroma', Sans-serif;
+  position: absolute;
+  top: 57px;
+  left: 97px;
+  font-size: 1.7em;
+  opacity: .4;
+  z-index: 55555;
+}
+
+
+.chart {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  margin: auto;
+}
+.doughnutTip {
+  position: absolute;
+  min-width: 30px;
+  max-width: 300px;
+  padding: 5px 15px;
+  border-radius: 1px;
+  background: rgba(0,0,0,.8);
+  color: #ddd;
+  font-size: 17px;
+  text-shadow: 0 1px 0 #000;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: .06em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-transform: all .3s;
+     -moz-transform: all .3s;
+      -ms-transform: all .3s;
+       -o-transform: all .3s;
+          transform: all .3s;
+  pointer-events: none;
+}
+.doughnutTip:after {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  content: "";
+  height: 0;
+  margin: 0 0 0 -6px;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 6px solid rgba(0,0,0,.8);
+  line-height: 0;
+}
+.doughnutSummary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #585858;
+  text-align: center;
+  text-shadow: 0 -1px 0 #111;
+  cursor: default;
+}
+.doughnutSummaryTitle {
+  position: absolute;
+  width: 100%;
+  font-size: 8em;
+  opacity: 1;
+  font-family: 'Michroma', Sans-serif;
+  top: -28px;
+  left: -3px;
+}
+.doughnutSummaryNumber {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -15%;
+  font-size: 55px;
+  display: none;
+}
+g path:hover { opacity: .65; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

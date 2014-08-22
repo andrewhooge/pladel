@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery-knob
+//= require donut
+//= require wow
 //= require_tree .
+
